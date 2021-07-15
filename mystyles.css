@@ -1,0 +1,41 @@
+body {
+    background-color: #1f2833;
+}
+
+h1 {
+    color: #66fcf1;
+    font-family: Lucida Handwriting;
+    font-size: 45px;
+}
+
+.page-structure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 90vh;
+    gap: 40px;
+}
+
+#draw-grid {
+    background-color: #c5c6c7;
+    border-color: #45a29e;
+    border-style: solid;
+    min-width: 40vw;
+    height: 40vw;
+}
+
+.sixteen {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+}
+
+.cell {
+    /* background-color: red; */
+    background-color: #0b0c10;
+}
+
+.cell:hover {
+    background-color: #66fcf1;
+}
