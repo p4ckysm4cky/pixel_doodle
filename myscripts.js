@@ -31,7 +31,7 @@ function generateCell() {
 }
 
 function sixteenCells() {
-    for (i = 0; i < 16 * 16; i++) {
+    for (i = 0; i < 64 * 64; i++) {
         generateCell()
     }
 }

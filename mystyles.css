@@ -27,8 +27,8 @@ h1 {
 
 .sixteen {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(64, 1fr);
+    grid-template-rows: repeat(64, 1fr);
 }
 
 .cell {
