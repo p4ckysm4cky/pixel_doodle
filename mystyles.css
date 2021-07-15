@@ -40,3 +40,14 @@ h1 {
 .cell:hover {
     background-color: #bcfffb;
 }
+
+#reset {
+    border-color:#66fcf1;
+    color: #c5c6c7;
+    padding: 20px 30px;
+    border-style: solid;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+
+}

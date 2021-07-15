@@ -3,7 +3,7 @@ let drag = false
 
 
 
-function resetCells() {
+function deleteCells() {
     grid.innerHTML = " "
 }
 
@@ -14,16 +14,13 @@ function generateCell() {
     
 
     cell.addEventListener("mousedown", function(e) {
-        console.log("mousedown")
         cell.style["background-color"] = "#66fcf1"
         drag = true
     })
-    cell.addEventListener("mouseup", function(e) {
+    document.addEventListener("mouseup", function(e) {
         drag = false
-        console.log("mouseup")
     })
     cell.addEventListener("mouseenter", function(e) {
-        console.log("fired")
         if (drag) {
             cell.style["background-color"] = "#66fcf1"
         }        
@@ -39,5 +36,15 @@ function sixteenCells() {
     }
 }
 
-resetCells()
+function resetCells() {
+    deleteCells()
+    sixteenCells()
+}
+
+
+
+deleteCells()
 sixteenCells()
+document.getElementById("reset").addEventListener("click", function(e){
+    resetCells();
+})
