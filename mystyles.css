@@ -34,8 +34,9 @@ h1 {
 .cell {
     /* background-color: red; */
     background-color: #0b0c10;
+    user-select: none;
 }
 
 .cell:hover {
-    background-color: #66fcf1;
+    background-color: #bcfffb;
 }
