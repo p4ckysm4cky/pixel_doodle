@@ -4,7 +4,12 @@ let drag = false
 
 
 function deleteCells() {
-    grid.innerHTML = " "
+    const allCells = document.querySelectorAll(".cell")
+    const allCellsArray = Array.from(allCells)
+    for (i = 0; i < allCellsArray.length; i ++) {
+        allCellsArray[i]
+        allCellsArray[i].remove()
+    }
 }
 
 function generateCell() {
@@ -17,14 +22,16 @@ function generateCell() {
         cell.style["background-color"] = "#66fcf1"
         drag = true
     })
-    document.addEventListener("mouseup", function(e) {
-        drag = false
-    })
+    // document.addEventListener("mouseup", function(e) {
+    //     drag = false
+    // })
     cell.addEventListener("mouseenter", function(e) {
         if (drag) {
             cell.style["background-color"] = "#66fcf1"
         }        
     })
+
+
 
 
     grid.appendChild(cell)
@@ -47,4 +54,7 @@ deleteCells()
 sixteenCells()
 document.getElementById("reset").addEventListener("click", function(e){
     resetCells();
+})
+document.addEventListener("mouseup", function(e) {
+    drag = false
 })
